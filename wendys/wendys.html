@@ -6,8 +6,7 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        padding-left: 15px;
-        padding-right: 15px;
+
     }
 
     .media-topbar li {
@@ -19,7 +18,7 @@
         color: #493533;
         padding-left: 10px;
         font-weight: 800;
-        font-size: 10px
+        font-size: 10px;
     }
 
     .nav-bar {
@@ -44,23 +43,6 @@
         background-color: #f4f4f4;
     }
 
-    @media (min-width: 768px) {
-        .body-container {
-            width: 750px;
-        }
-    }
-
-    @media (min-width: 992px) {
-        .body-container {
-            width: 970px;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        .body-container {
-            width: 1170px;
-        }
-    }
 
     .icon-class {
         height: 25px;
@@ -78,6 +60,7 @@
         float: right !important;
         list-style-type: none;
 
+
     }
 
     .nav-right li {
@@ -88,6 +71,10 @@
         position: relative;
         display: block;
         padding: 10px 15px;
+        text-decoration: none;
+        color: #493533;
+        font-size: 17px;
+        font-weight: 800;
     }
 
     .banner {
@@ -108,18 +95,34 @@
         display: block;
     }
 
-    @media (max-width: 767px) {
-        .non-hidden-banner {
-            display: none !important;
-        }
+
+
+    .menu {
+        flex-flow: row wrap;
+        display: flex;
+        list-style: none;
+        padding-inline-start: 0px !important;
     }
 
-    @media (min-width: 800px) {
-        .hidden-banner {
-            display: none !important;
-        }
+    .menu-card {
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 
+
+    .menu-card img {
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+    }
+
+    .menu-card a {
+        color: black;
+        text-decoration: none;
+    }
 
     #buttonImage {
         height: 20px;
@@ -143,6 +146,15 @@
         width: 113px;
     }
 
+    #sucursalesOption a {
+        text-decoration: none;
+
+    }
+
+    #sucursalesOption text {
+        height: 100%;
+    }
+
     #buttonFacturar {
         background-color: #00A3DD !important;
         color: #fff !important;
@@ -163,16 +175,136 @@
         width: 100%;
     }
 
+    #menuContainer {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    #footer {
+        background-color: #191919;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #upperFooter {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    #leftFooter {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        justify-content: center;
+        ;
+    }
+
+    #leftFooter ul {
+        list-style: none;
+        margin-top: 50px;
+        padding-inline-start: 0px;
+
+    }
+
+    #footerLegend {
+        display: inherit;
+        justify-content: center;
+    }
+
+    #leftFooter li {
+        float: left;
+        padding-left: 15px;
+        font-size: 13px;
+        font-weight: 800
+    }
+
+    #leftFooter img {
+        width: 85%;
+        height: auto;
+        margin: 50px auto;
+        display: block;
+    }
+
+    #rightFooter {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+    }
+
+    #rightFooter img {
+        display: block;
+    }
+
+    #copyright {
+        font-size: 13px;
+        color: white;
+        text-align: center;
+
+    }
+
+    @media (min-width: 768px) {
+        #leftFooter {
+            width: 50%;
+        }
+    }
+
+    @media (max-width: 767px) and (min-width: 240px) {
+        #upperFooter {
+            flex-direction: column;
+        }
+
+        #rightFooter {
+            width: 100%;
+        }
+    }
+
 
     @media only screen and (max-width: 767px) and (min-width: 240px) {
         #notCarousel {
             margin-top: 103px;
         }
     }
+
+    @media (max-width: 767px) {
+        .non-hidden-banner {
+            display: none !important;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .hidden-banner {
+            display: none !important;
+        }
+    }
+
+
+    @media (min-width: 768px) {
+        .body-container {
+            width: 750px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .body-container {
+            width: 970px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .body-container {
+            width: 1170px;
+        }
+    }
 </style>
 
-<body>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+</head>
 
+<body>
     <div class="body-container">
 
         <div class="nav-bar">
@@ -200,10 +332,49 @@
             </div>
         </div>
         <div id="notCarousel">
-            <div class="non-hidden-banner"><img src="http://wendysmx.net/publicidad/20200918162009.jpg" alt=""></div>
-            <div class="hidden-banner"><img src="http://wendysmx.net/publicidad/20181031012847.jpg" alt=""></div>
+            <div class="non-hidden-banner"><img src="http://wendysmx.net/publicidad/20190822202211.jpg" alt=""></div>
+            <div class="hidden-banner"><img src="http://wendysmx.net/publicidad/20190822202233.jpg" alt=""></div>
         </div>
-        <div id="menuContaier"></div>
+        <div id="menuContainer">
+            <ul class="menu">
+                <li class="menu-card"><a href="">
+                        <img src="http://wendysmx.net/img/menu/carne.jpg" alt="">
+                        <h4>Carne</h4>
+                    </a></li>
+                <li class="menu-card"><a href="">
+                        <img src="http://wendysmx.net/img/menu/ensaladas.jpg" alt="">
+                        <h4>Ensaladas</h4>
+                    </a></li>
+                <li class="menu-card"><a href="">
+                        <img src="http://wendysmx.net/img/menu/pollo.jpg" alt="">
+                        <h4>Pollo</h4>
+                    </a></li>
+                <li class="menu-card"><a href="">
+                        <img src="http://wendysmx.net/img/menu/wendyspack.jpg" alt="">
+                        <h4>Wendy's Pack</h4>
+                    </a></li>
+                <li class="menu-card"><a href="">
+                        <img src="http://wendysmx.net/img/menu/gourmet.jpg" alt="">
+                        <h4>Supreme</h4>
+                    </a></li>
+                <li class="menu-card"><a href="">
+                        <img src="http://wendysmx.net/img/menu/papasycomplementos.jpg" alt="">
+                        <h4>Papas y <br> complemento</h4>
+                    </a></li>
+                <li class="menu-card"><a href="">
+                        <img src="http://wendysmx.net/img/menu/postres.jpg" alt="">
+                        <h4>Postres</h4>
+                    </a></li>
+                <li class="menu-card"><a href="">
+                        <img src="http://wendysmx.net/img/menu/kidsmeal.jpg" alt="">
+                        <h4>Kid's meal</h4>
+                    </a></li>
+                <li class="menu-card"><a href="">
+                        <img src="http://wendysmx.net/img/menu/desayunos.jpg" alt="">
+                        <h4>Desayunos</h4>
+                    </a></li>
+            </ul>
+        </div>
         <div class="banner">
             <div class="non-hidden-banner"><img src="http://wendysmx.net/publicidad/20181031012839.jpg" alt=""></div>
             <div class="hidden-banner"><img src="http://wendysmx.net/publicidad/20181031012847.jpg" alt=""></div>
@@ -220,7 +391,27 @@
         </div>
 
 
-        <div id="footer"></div>
+        <div id="footer">
+            <div id="upperFooter">
+                <div id="leftFooter">
+                    <div id="footerLegend">
+                        <ul>
+                            <li>Nostros</li>
+                            <li>Empleo</li>
+                            <li>Contacto</li>
+                        </ul>
+                    </div>
+                    <a href=""><img src="http://wendysmx.net/img/logogah.png" alt=""></a>
+                </div>
+                <div id="rightFooter">
+                    <a href=""></a><img src="http://wendysmx.net/img/logofooter.png" alt=""></a>
+                </div>
+            </div>
+            <div id="copyright">
+                <p>©2020 Quality Is Our Recipe, LLC</p>
+            </div>
+
+        </div>
 
 
     </div>
