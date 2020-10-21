@@ -1,0 +1,452 @@
+<style>
+    .main-content {
+        display: block;
+        background-color: white;
+        text-align: center;
+    }
+
+    .title-1 {
+        color: 3071a9;
+        font-size: 2.5em;
+        font-weight: bold;
+        margin: 2% 0;
+        text-align: center;
+    }
+
+    .title-2 {
+        color: #025a8c;
+        font-size: 2.0em;
+    }
+
+
+
+    .arrow-double {
+        max-width: 60px;
+    }
+
+    .membership-area {
+        display: inline-block;
+        width: 100%;
+        margin: 2% 0;
+        padding: 2%;
+        font-size: 3em;
+        background-color: #f6f6f6;
+    }
+
+    .membership-area button {
+        max-width: 25%;
+        margin: 0 3%;
+        width: 90%;
+        background-color: #3071a9;
+        padding: 10px 16px;
+        font-size: 18px;
+        color: white;
+    }
+
+    .package-area {
+        margin-left: -10px;
+        margin-right: -10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .area-venta {
+        width: 50%;
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+    }
+
+    .venta-row {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: white;
+        justify-content: center;
+    }
+
+    .venta-title {
+        color: white;
+        background-color: #3071a9;
+        font-weight: bold;
+        margin: 1% 0;
+        padding: 4px;
+    }
+
+    .venta-membrecia {
+        max-width: 330px;
+        margin: 0 2px;
+        background-color: #f6f6f6;
+        border: 1px solid #e2e2e2;
+        color: black;
+        padding: 17px 0 0 0;
+
+    }
+
+    .venta-membrecia h1 {
+        display: block;
+        line-height: 1.8em;
+        font-size: 34px;
+        margin: 0;
+        padding: 0;
+        color: black;
+
+    }
+
+    .venta-membrecia img {
+        max-width: 245px;
+    }
+
+    .venta-price {
+        font-size: 4rem;
+        margin: 8px 0;
+    }
+
+    .venta-membrecia ul {
+        list-style: none;
+        margin: 0;
+        padding: 0
+    }
+
+    .venta-membrecia li {
+        max-height: 70px;
+        border-top: none;
+        display: table;
+        width: 100%;
+        padding: 2% 0;
+        color: #333333;
+        height: 70px;
+        margin: 0;
+
+    }
+
+    .venta-membrecia li img {
+        display: inline-table;
+        vertical-align: middle;
+    }
+
+    .venta-texts {
+        width: 85%;
+        display: inline-table;
+        text-align: left;
+    }
+
+    .venta-membrecia button {
+        color: #ffffff;
+        width: 90%;
+        margin: 5px auto;
+        background-color: #3071a9;
+        padding: 10px 16px;
+        font-size: 18px;
+    }
+
+    .beneficios-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .beneficios-card {
+        background-color: #ebebeb;
+        border: 3px solid #ffffff;
+        padding: 2%;
+        width: 33.333%;
+        float: left;
+        color: black;
+        text-align: center;
+    }
+
+    .beneficios-card img {
+        max-width: 60px;
+    }
+
+    .philosophy-section {
+        margin: 2% 0;
+        background-color: #ebebeb;
+        padding: 3%;
+    }
+
+    .cash-icon {
+        font-size: 60%;
+        vertical-align: middle;
+    }
+
+    .number-icon {
+        font-size: small;
+        top: -0.5em;
+    }
+
+    @media screen and (min-width: 1024px) {
+        .main-content {
+            width: 100%;
+            max-width: 1400px;
+            padding: 0px 20px 0px 20px;
+        }
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .package-area {
+            flex-direction: column;
+        }
+
+        .area-venta {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .membership-area {
+            font-size: 2em;
+        }
+
+        .membership-area button {
+            max-width: 100%;
+            margin: 2%;
+
+        }
+
+        .beneficios-row {
+            flex-direction: column;
+        }
+
+        .beneficios-card {
+            width: 100%;
+        }
+    }
+</style>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+</head>
+
+<body>
+    <div class="main-content">
+
+        <p class="title-2">¿Tienes dudas acerca de <strong>como registrate</strong>? da clic aqui </p>
+        <div class="membership-area">
+            ¿Ya tienes membresia?<button>Registrate aqui</button>
+        </div>
+
+        <div class="package-area">
+            <div class="area-venta">
+                <div class="venta-title">
+                    INDIVIDUAL
+                </div>
+                <div class="venta-row">
+                    <div class="venta-membrecia">
+                        <h1>Dorada</h1>
+                        <img src="https://www.costco.com.mx/medias/sys_master/images/h03/hcc/46784305889310.png" alt="">
+                        <p class="venta-price"><span class="cash-icon">$</span>500</p>
+                        Anualidad incluye impuestos
+                        <br>
+                        <a href="">Renuévala aquí</a>
+                        <ul>
+                            <li>
+                                <p class="venta-texts"> Membresía complementaria sin costo</p>
+                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            </li>
+                            <li style="background-color: #ebebeb;">
+                                <p class="venta-texts">Válida en todo el mundo</p>
+                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            </li>
+                            <li>
+                                <p class="venta-texts">2% de Recompensa sobre el total anual de tus compras sin
+                                    impuestos (Recompensa
+                                    máxima de
+                                    $7,500 M.N.)</p>
+                                <img src="https://i.ibb.co/cYX9z1M/xmark.png" alt="">
+                            </li>
+                            <li style="background-color: #ebebeb;">
+                                <p class="venta-texts">Membresías Adicionales ($250 por membresía)</p>
+                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            </li>
+                        </ul>
+                        <button>Agregar al carrito</button>
+                    </div>
+                    <div class="venta-membrecia">
+                        <h1>Dorada Ejecutiva</h1>
+                        <img src="https://www.costco.com.mx/medias/sys_master/images/h40/hf0/46784306020382.png" alt="">
+                        <p class="venta-price"><span class="cash-icon">$</span>1,100</p>
+                        Anualidad incluye impuestos
+                        <br>
+                        <a href="">Renuévala aquí</a>
+                        <ul>
+                            <li>
+                                <p class="venta-texts">Membresía complementaria sin costo </p>
+                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            </li>
+                            <li style="background-color: #ebebeb;">
+                                <p class="venta-texts">Válida en todo el mundo</p>
+                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            </li>
+                            <li>
+                                <p class="venta-texts">2% de Recompensa sobre el total anual de tus compras sin
+                                    impuestos (Recompensa
+                                    máxima de
+                                    $7,500 M.N.)</p>
+                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            </li>
+                            <li style="background-color: #ebebeb;">
+                                <p class="venta-texts">Membresías Adicionales ($250 por membresía)</p>
+                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            </li>
+                        </ul>
+                        <button>Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="area-venta">
+                <div class="venta-title">
+                    NEGOCIO
+                </div>
+                <div class="venta-row">
+                    <div class="venta-membrecia">
+                        <h1>Negocio</h1>
+                        <img src="https://www.costco.com.mx/medias/sys_master/images/h67/hf5/46784306216990.png" alt="">
+                        <p class="venta-price"><span class="cash-icon">$</span>500</p>
+                        Anualidad incluye impuestos
+                        <br>
+                        <a href="">Renuévala aquí</a>
+                        <ul>
+                            <li>
+                                <p class="venta-texts">Membresía complementaria sin costo</p>
+                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            </li>
+                            <li style="background-color: #ebebeb;">
+                                <p class="venta-texts">Válida en todo el mundo</p>
+                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            </li>
+                            <li>
+                                <p class="venta-texts">2% de Recompensa sobre el total anual de tus compras sin
+                                    impuestos (Recompensa
+                                    máxima de
+                                    $7,500 M.N.)</p>
+                                <img src="https://i.ibb.co/cYX9z1M/xmark.png" alt="">
+                            </li>
+                            <li style="background-color: #ebebeb;">
+                                <p class="venta-texts">Membresías Adicionales ($250 por membresía)</p>
+                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            </li>
+                        </ul>
+                        <button>Agregar al carrito</button>
+                    </div>
+                    <div class="venta-membrecia">
+                        <h1>Negocio Ejecutiva</h1>
+                        <img src="https://www.costco.com.mx/medias/sys_master/images/h40/hf0/46784306020382.png" alt="">
+                        <p class="venta-price"><span class="cash-icon">$</span>1,100</p>
+                        Anualidad incluye impuestos
+                        <br>
+                        <a href="">Renuévala aquí</a>
+                        <ul>
+                            <li>
+                                <p class="venta-texts">Membresía complementaria sin costo</p>
+                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            </li>
+                            <li style="background-color: #ebebeb;">
+                                <p class="venta-texts">Válida en todo el mundo</p>
+                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            </li>
+                            <li>
+                                <p class="venta-texts">2% de Recompensa sobre el total anual de tus compras sin
+                                    impuestos (Recompensa
+                                    máxima de
+                                    $7,500 M.N.)</p>
+                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            </li>
+                            <li style="background-color: #ebebeb;">
+                                <p class="venta-texts">Membresías Adicionales ($250 por membresía)</p>
+                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            </li>
+                        </ul>
+                        <button>Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h1 class="title-1">Beneficios adicionales <br>
+            *Consulta terminos y condiciones</h1>
+        <img class="arrow-double" src="https://www.costco.com.mx/medias/sys_master/banners/h11/hc3/46784611680286.png"
+            alt="double-arrows-pointing-down">
+        <div class="beneficios-section">
+            <div class="beneficios-row">
+                <div class="beneficios-card"><img
+                        src="https://www.costco.com.mx/medias/sys_master/banners/h5b/h44/46784611450910.png" alt="">
+                    <p> Examen de la vista profesional sin costo. </p>
+                </div>
+                <div class="beneficios-card"><img
+                        src="https://www.costco.com.mx/medias/sys_master/banners/h8a/h13/46784611614750.png" alt="">
+                    <p> Examen de audiometría sin costo.</p>
+                </div>
+                <div class="beneficios-card"><img
+                        src="https://www.costco.com.mx/medias/sys_master/banners/h67/h8e/46784611581982.png" alt="">
+                    <p> Compra en línea, recoge en tienda. </p>
+                </div>
+            </div>
+            <div class="beneficios-row">
+                <div class="beneficios-card"><img
+                        src="https://www.costco.com.mx/medias/sys_master/banners/hab/hbe/46784611778590.png" alt="">
+                    <p> Limpieza de lentes y ajuste de armazón sin costo.</p>
+                </div>
+                <div class="beneficios-card"><img
+                        src="https://www.costco.com.mx/medias/sys_master/banners/h38/hc8/46784611876894.png" alt="">
+                    <p> Mantenimiento preventivo de auxiliares auditivos.</p>
+                </div>
+                <div class="beneficios-card"><img
+                        src="https://www.costco.com.mx/medias/sys_master/banners/h2c/h7e/46784611745822.png" alt="">
+                    <p> Productos exclusivos en línea.</p>
+                </div>
+            </div>
+            <div class="beneficios-row">
+                <div class="beneficios-card"><img
+                        src="https://www.costco.com.mx/medias/sys_master/banners/h5c/hdc/46784611418142.png" alt="">
+                    <p> Conoce todos los beneficios de Óptica aquí.</p>
+                </div>
+                <div class="beneficios-card"><img
+                        src="https://www.costco.com.mx/medias/sys_master/banners/heb/h91/46784611549214.png" alt="">
+                    <p> Calibración de presión de llantas sin costo.</p>
+                </div>
+                <div class="beneficios-card"><img
+                        src="https://www.costco.com.mx/medias/sys_master/banners/hcc/hfa/46784611483678.png" alt="">
+                    <p> Productos frescos y orgánicos de la más alta calidad.</p>
+                </div>
+            </div>
+        </div>
+        <h1 class="title-1">Nuestra filosofia</h1>
+        <img class="arrow-double" src="https://www.costco.com.mx/medias/sys_master/banners/h11/hc3/46784611680286.png"
+            alt="double-arrows-pointing-down">
+        <div class="philosophy-section">
+            <p>
+                Alta calidad a los mejores precios ¿cómo lo hacemos? Ofrecemos precios bajos en nuestra selección de
+                productos nacionales e importados dentro de una amplia gama de categorías. Los volúmenes de venta altos,
+                empaques eficientes y presentaciones más grandes son los que nos permiten reducir los costos de
+                embalaje, distribución y manipulación. Este modelo comercial produce grandes ventas.
+                <br> <strong> Nuestros ahorros seven reflejados en precios más bajos para ti.</strong>
+                <br><br>
+                ¿Qué marcas vendemos? Tenemos una amplia selección de artículos de <strong>marcas líderes importados y
+                    nacionales.</strong>
+                <br><br>
+                También ofrecemos nuestra marca exclusiva Kirkland Signature, con productos desarrollados de
+                <strong>igual o
+                    mejor calidad</strong> que las marcas líderes.
+                <br><br>
+                ¿Qué productos vendemos? Vendemos una <strong>gran variedad de productos para tu hogar, negocio y
+                    entretenimiento</strong>: electrónica, cómputo, línea blanca, muebles, video juegos, libros,
+                certificados de
+                regalo, juguetes, artículos deportivos, abarrotes, comida, vinos y licores, joyería, productos de salud
+                y belleza, automotriz, ferretería, jardinería, material y equipo para oficina.
+                <br><br>
+                ¿Por qué nuestros productos cambian con tanta frecuencia? Siempre nos gusta ofrecer a nuestros clientes
+                las mejores ofertas, y por lo general sólo están disponibles por tiempo limitado: cuando se acaban,
+                <br>
+                ¡se acaban! Lo llamamos <strong>“la búsqueda del tesoro continúa en línea”.</strong>
+
+            </p>
+        </div>
+    </div>
+</body>
