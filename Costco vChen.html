@@ -1,0 +1,553 @@
+<style>
+/* ------------------------------------------------------------------ */
+/* BASIC SETUP */
+/* ------------------------------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html, 
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.main-container {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* ------------------------------------------------------------------ */
+/* REUSABLE COMPONENTS */
+/* ------------------------------------------------------------------ */
+
+h1 {
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.row {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 250%;
+    color: #3071a9;
+    text-align: center;
+    margin: 2% 0;
+}
+
+.column-title {
+    background-color: #3071a9;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 1% 0;
+    padding: 4px;
+}
+
+.flex-col-of-2 {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+}
+
+/* ------------------------------------------------------------------ */
+/* ICONS */
+/* ------------------------------------------------------------------ */
+
+.cash-char-icon {
+    font-size: 60%;
+    vertical-align: middle;
+}
+
+.arrows {
+    max-width: 60px;
+}
+
+/* ------------------------------------------------------------------ */
+/* SECTION REGISTER */
+/* ------------------------------------------------------------------ */
+
+.register-head {
+    display: block;
+    width: 100%;
+}
+
+.register-text {
+    display: inline-block;
+    width: 100%;
+    font-size: 300%;
+    background-color: #f6f6f6;
+    margin: 2% 0;
+    padding: 2%;
+}
+
+.register-text button {
+    max-width: 25%;
+    background-color: #3071a9;
+    width: 90%;
+    font-size: 18px;
+    color: #fff;
+    margin: 0 3%;
+    padding: 10px 16px;
+}
+
+/* ------------------------------------------------------------------ */
+/* SECTION MEMBERSHIPS */
+/* ------------------------------------------------------------------ */
+
+.section-memberships {
+    display: flex;
+    flex-direction: row;
+}
+
+.memberships-showcase {
+    background-color: #fff;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.membership {
+    max-width: 330px;
+    background-color: #f6f6f6;
+    color: #000;
+    border: 1px solid #e2e2e2;
+    margin: 0 2px;
+    padding: 17px 0 0 0;
+}
+
+.membership h1 {
+    display: block;
+    line-height: 180%;
+    margin: 0;
+    padding: 0;
+}
+
+.membership img {
+    max-width: 245px;
+}
+
+.membership ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.membership li{
+    display: table;
+    max-height: 70px;
+    width: 100%;
+    height: 70px;
+    border-top: none;
+    color: #333333;
+    margin: 0;
+    padding: 2% 0;
+}
+
+.membership li img {
+    display: inline-table;
+    vertical-align: middle;
+}
+
+.membership-price {
+    display: block;
+    font-size: 400%;
+    margin: 8px 0;
+}
+
+.membership-dark-row {
+    background-color: #ebebeb;
+}
+
+.membership-text {
+    display: inline-table;
+    width: 85%;
+    text-align: left;
+}
+
+.membership button {
+    background-color: #3071a9;
+    width: 90%;
+    font-size: 18px;
+    color: #fff;
+    margin: 5px auto;
+    padding: 10px 16px;
+}
+
+/* ------------------------------------------------------------------ */
+/* SECTION BENEFITS */
+/* ------------------------------------------------------------------ */
+
+.benefits-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.benefits-item {
+    float: left;
+    background-color: #ebebeb;
+    width: 33.333%;
+    border: 3px solid #fff;
+    color: #000;
+    padding: 2%;
+}
+
+.benefits {
+    padding-top: 20px;
+}
+
+.benefits img {
+    max-width: 60px;
+    vertical-align: middle;
+}
+
+.benefits-text {
+    display: table-cell;
+    text-align: left;
+    margin: 2% 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* SECTION PHYLOSOPHY */
+/* ------------------------------------------------------------------ */
+
+.philosophy {
+    background-color: #ebebeb;
+    margin: 2% 0;
+    padding: 3%;
+}
+
+/* ------------------------------------------------------------------ */
+/* QUERIES */
+/* ------------------------------------------------------------------ */
+
+@media only screen and (min-width: 1024px) {
+    .row {
+        max-width: 1400px;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .section-memberships {
+        flex-direction: column;
+    }
+
+    .flex-col-of-2 {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .register-text {
+        font-size: 200%;
+    }
+
+    .register-text button {
+        max-width: 100%;
+        margin: 2%;
+    }
+
+    .benefits-row {
+        flex-direction: column;
+    }
+
+    .benefits-item {
+        width: 100%;
+    }
+}
+</style>
+
+
+<head>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="main-container">
+        <section>
+            <div class="row">
+                <div>
+                    <img src="https://www.costco.com.mx/medias/sys_master/banners/hcb/h6b/46784633798686.jpg" alt="Imagen de Registro" class="register-head">
+                </div>
+
+                <div class="register-text">
+                    <p>¿Ya tienes membresía?<button>Regístrala aquí</button></p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-memberships row">
+                <div class="flex-col-of-2 clearfix">
+                    <div class="column-title">
+                        <p>Individual</p>
+                    </div>
+                    
+                    <div class="memberships-showcase">
+                        <div class="membership">
+                            <h1>Dorada</h1>
+                            <img src="https://www.costco.com.mx/medias/sys_master/images/h03/hcc/46784305889310.png" alt="Membresía dorada">
+                            <span class="membership-price">
+                                <span class="cash-char-icon">$</span>500
+                            </span>
+                            <p>Anualidad incluye impuestos</p>
+                            <br>
+                            <a href="#">Renuévala aquí</a>
+                        
+                            <ul>
+                                <li>
+                                    <p class="membership-text">Membresía complementaria sin costo</p>
+                                    <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="Incluido">
+                                </li>
+                                <li class="membership-dark-row">
+                                    <p class="membership-text">Válida en todo el mundo</p>
+                                    <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="Incluido">
+                                </li>
+                                <li>
+                                    <p class="membership-text">
+                                        2% de Recompensa sobre el total anual de tus compras sin impuestos 
+                                        (Recompensa máxima de $7,500 M.N.)
+                                    </p>
+                                    <img src="https://i.ibb.co/cYX9z1M/xmark.png" alt="No incluido">
+                                </li>
+                                <li class="membership-dark-row">
+                                    <p class="membership-text">Membresías Adicionales ($250 por membresía)</p>
+                                    <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="Incluido">
+                                </li>
+                            </ul>
+                            <button>Agregar al carrito</button>
+                        </div>
+
+                        <div class="membership">
+                            <h1>Dorada Ejecutiva</h1>
+                            <img src="https://www.costco.com.mx/medias/sys_master/images/h40/hf0/46784306020382.png" alt="Membresía dorada ejecutiva">
+                            <span class="membership-price">
+                                <span class="cash-char-icon">$</span>1100
+                            </span>
+                            <p>Anualidad incluye impuestos</p>
+                            <br>
+                            <a href="#">Renuévala aquí</a>
+
+                            <ul>
+                                <li>
+                                    <p class="membership-text">Membresía complementaria sin costo</p>
+                                    <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="Incluido">
+                                </li>
+                                <li class="membership-dark-row">
+                                    <p class="membership-text">Válida en todo el mundo</p>
+                                    <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="Incluido">
+                                </li>
+                                <li>
+                                    <p class="membership-text">
+                                        2% de Recompensa sobre el total anual de tus compras sin impuestos 
+                                        (Recompensa máxima de $7,500 M.N.)
+                                    </p>
+                                    <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="Incluido">
+                                </li>
+                                <li class="membership-dark-row">
+                                    <p class="membership-text">Membresías Adicionales ($250 por membresía)</p>
+                                    <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="Incluido">
+                                </li>
+                            </ul>
+                            <button>Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-col-of-2 clearfix">
+                    <div class="column-title">
+                        <p>Negocios</p>
+                    </div>
+                    
+                    <div class="memberships-showcase">
+                        <div class="membership">
+                            <h1>Negocio</h1>
+                            <img src="https://www.costco.com.mx/medias/sys_master/images/h67/hf5/46784306216990.png" alt="Membresía de negocios">
+                            <span class="membership-price">
+                                <span class="cash-char-icon">$</span>500
+                            </span>
+                            <p>Anualidad incluye impuestos</p>
+                            <br>
+                            <a href="#">Renuévala aquí</a>
+                        
+                            <ul>
+                                <li>
+                                    <p class="membership-text">Membresía complementaria sin costo</p>
+                                    <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="Incluido">
+                                </li>
+                                <li class="membership-dark-row">
+                                    <p class="membership-text">Válida en todo el mundo</p>
+                                    <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="Incluido">
+                                </li>
+                                <li>
+                                    <p class="membership-text">
+                                        2% de Recompensa sobre el total anual de tus compras sin impuestos 
+                                        (Recompensa máxima de $7,500 M.N.)
+                                    </p>
+                                    <img src="https://i.ibb.co/cYX9z1M/xmark.png" alt="No incluido">
+                                </li>
+                                <li class="membership-dark-row">
+                                    <p class="membership-text">Membresías Adicionales ($250 por membresía)</p>
+                                    <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="Incluido">
+                                </li>
+                            </ul>
+                            <button>Agregar al carrito</button>
+                        </div>
+
+                        <div class="membership">
+                            <h1>Negocio Ejecutiva</h1>
+                            <img src="https://www.costco.com.mx/medias/sys_master/images/h40/hf0/46784306020382.png" alt="Membresía de negocios ejecutiva">
+                            <span class="membership-price">
+                                <span class="cash-char-icon">$</span>1100
+                            </span>
+                            <p>Anualidad incluye impuestos</p>
+                            <br>
+                            <a href="#">Renuévala aquí</a>
+
+                            <ul>
+                                <li>
+                                    <p class="membership-text">Membresía complementaria sin costo</p>
+                                    <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="Incluido">
+                                </li>
+                                <li class="membership-dark-row">
+                                    <p class="membership-text">Válida en todo el mundo</p>
+                                    <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="Incluido">
+                                </li>
+                                <li>
+                                    <p class="membership-text">
+                                        2% de Recompensa sobre el total anual de tus compras sin impuestos 
+                                        (Recompensa máxima de $7,500 M.N.)
+                                    </p>
+                                    <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="Incluido">
+                                </li>
+                                <li class="membership-dark-row">
+                                    <p class="membership-text">Membresías Adicionales ($250 por membresía)</p>
+                                    <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="Incluido">
+                                </li>
+                            </ul>
+                            <button>Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section>
+            <div class="row">
+                <h1 class="section-title">Beneficios adicionales <br> *Consulta terminos y condiciones</h1>
+                <img class="arrows" src="https://www.costco.com.mx/medias/sys_master/banners/h11/hc3/46784611680286.png" alt="Flechas hacia abajo">
+
+                <div class="benefits">
+                    <div class="benefits-row">
+                        <div class="benefits-item">
+                            <img src="https://www.costco.com.mx/medias/sys_master/banners/h5b/h44/46784611450910.png" alt="Icono examen de vista">
+                            <p>Examen de la vista profesional sin costo.</p>
+                        </div>
+                        <div class="benefits-item">
+                            <img src="https://www.costco.com.mx/medias/sys_master/banners/h8a/h13/46784611614750.png" alt="Icono examen de audiometría">
+                            <p>Examen de audiometría sin costo.</p>
+                        </div>
+                        <div class="benefits-item">
+                            <img src="https://www.costco.com.mx/medias/sys_master/banners/h67/h8e/46784611581982.png" alt="Icono compras en línea">
+                            <p>Compra en línea, recoge en tienda.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefits-row">
+                        <div class="benefits-item">
+                            <img src="https://www.costco.com.mx/medias/sys_master/banners/hab/hbe/46784611778590.png" alt="Icono lentes">
+                            <p>Limpieza de lentes y ajuste de armazón sin costo.</p>
+                        </div>
+                        <div class="benefits-item">
+                            <img src="https://www.costco.com.mx/medias/sys_master/banners/h38/hc8/46784611876894.png" alt="Icono mantenimiento de auxiliares auditivos">
+                            <p>Mantenimiento preventivo de auxiliares auditivos.</p>
+                        </div>
+                        <div class="benefits-item">
+                            <img src="https://www.costco.com.mx/medias/sys_master/banners/h2c/h7e/46784611745822.png" alt="Icono productos exclusivos">
+                            <p>Productos exclusivos en línea.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefits-row">
+                        <div class="benefits-item">
+                            <img src="https://www.costco.com.mx/medias/sys_master/banners/h5c/hdc/46784611418142.png" alt="Icono óptica">
+                            <p>Conoce todos los beneficios de óptica aquí.</p>
+                        </div>
+                        <div class="benefits-item">
+                            <img src="https://www.costco.com.mx/medias/sys_master/banners/heb/h91/46784611549214.png" alt="Icono llantas">
+                            <p>Calibración de presión de llantas sin costo.</p>
+                        </div>
+                        <div class="benefits-item">
+                            <img src="https://www.costco.com.mx/medias/sys_master/banners/hcc/hfa/46784611483678.png" alt="Icono productos frescos">
+                            <p>Productos frescos y orgánicos de la más alta calidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section>
+            <div class="row">
+                <h1 class="section-title">Nuestra filosofia</h1>
+                <img class="arrows" src="https://www.costco.com.mx/medias/sys_master/banners/h11/hc3/46784611680286.png" alt="Flechas hacia abajo">
+
+                <div class="philosophy">
+                    <p>
+                        Alta calidad a los mejores precios ¿cómo lo hacemos? Ofrecemos precios bajos en nuestra selección de productos nacionales e importados dentro de
+                        una amplia gama de categorías.
+                        Los volúmenes de venta altos, empaques eficientes y presentaciones más grandes son los que nos permiten reducir los costos de embalaje,
+                        distribución y manipulación.
+                        Este modelo comercial produce grandes ventas.
+                        <br>
+                        <strong> Nuestros ahorros seven reflejados en precios más bajos para ti.</strong>
+                        <br><br>
+                        ¿Qué marcas vendemos? Tenemos una amplia selección de artículos de <strong>marcas líderes importados y nacionales.</strong>
+                        <br><br>
+                        También ofrecemos nuestra marca exclusiva Kirkland Signature, con productos desarrollados de <strong>igual o mejor calidad</strong> 
+                        que las marcas líderes.
+                        <br><br>
+                        ¿Qué productos vendemos? Vendemos una <strong>gran variedad de productos para tu hogar, negocio y entretenimiento</strong>: electrónica,
+                        cómputo, línea blanca, muebles, video juegos, libros, certificados de regalo, juguetes, artículos deportivos, abarrotes, comida, vinos y 
+                        licores, joyería, productos de salud y belleza, automotriz, ferretería, jardinería, material y equipo para oficina.
+                        <br><br>
+                        ¿Por qué nuestros productos cambian con tanta frecuencia? Siempre nos gusta ofrecer a nuestros clientes las mejores ofertas, y por lo general 
+                        sólo están disponibles por tiempo limitado: cuando se acaban,
+                        <br>
+                        ¡se acaban! Lo llamamos <strong>“la búsqueda del tesoro continúa en línea”.</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
