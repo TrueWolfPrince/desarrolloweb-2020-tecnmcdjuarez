@@ -1,0 +1,815 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <script src="https://kit.fontawesome.com/ca583662c5.js" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+    .body-specifications {
+        margin: 0;
+        border: 0;
+    }
+
+    .contenedor-general {
+        background-color: white;
+        font-family: Montserrat, sans-serif;
+        line-height: 1.8em;
+
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .encabezado {
+        padding-bottom: 20px;
+        width: inherit;
+    }
+
+    .area-roja {
+        height: auto;
+        padding: 2px 0;
+        opacity: 1;
+        background-color: #8d0404;
+        text-align: center;
+        font-size: 13px;
+        z-index: 5000;
+        color: #ffffff;
+    }
+
+    .area-roja p {
+        width: 90%;
+        margin: 0 auto;
+        line-height: 1.8em;
+    }
+
+    .encabezado-inferior {
+        border-bottom: solid 1px #9da6ae;
+        padding-bottom: 15px;
+        background-color: white;
+    }
+
+    .encabezado-contenido {
+        padding: 15px 0px 0px 0px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .encabezado-contenido::after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .encabezado-logo {
+        margin-left: 0;
+        width: 280px;
+        float: left;
+        display: inline;
+    }
+
+    .encabezado-logo img {
+        max-width: 180px;
+        padding-top: 0px;
+        margin: 0;
+        display: block;
+    }
+
+    .encabezado-menus {
+        display: inline;
+        text-align: right;
+    }
+
+
+    .encabezado-menus ul li {
+        display: inline-block;
+        padding: 0 0 0 16px;
+        position: relative;
+        margin: 0;
+        border: 0;
+    }
+
+    .encabezado-menus ul li a {
+        color: #1d3a6e;
+    }
+
+    .redes-sociales ul {
+        font-size: 95%;
+    }
+
+    .redes-sociales li {
+        padding-left: 0 !important;
+    }
+
+    .redes-sociales li i {
+        padding: 6px;
+        color: white;
+        margin: 0 0 0 5px;
+        opacity: 0.8;
+        background-color: #1c56a3;
+        border-radius: 50%;
+        line-height: 1;
+        position: relative;
+        display: block;
+    }
+
+    .menu-superior {
+        padding-top: 13px;
+        margin-bottom: 10px;
+        list-style: none;
+    }
+
+    .menu-superior ul {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-superior li a,
+    .menu-superior li a:visited {
+        font-size: 14px;
+        color: #1d3a6e;
+    }
+
+    .menu-inferior ul {
+        display: inline;
+    }
+
+    .menu-inferior li a {
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    #carrito {
+        display: inline-block;
+        padding: 0 0 0 16px;
+        position: relative;
+        margin: 0;
+        border: 0
+    }
+
+    #carrito li a {
+        padding: 10px 15px 10px 15px;
+        border: solid 1px #9da6ae;
+        border-radius: 5px;
+        color: #1d3a6e
+    }
+
+    .contenedor-tabla {
+        margin: 0 auto;
+    }
+
+    .area-tabla {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 5px 20px 5px;
+    }
+
+    .titulos-tabla {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+    }
+
+    .contenido-tabla {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+    }
+
+    .desc-pillar {
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+        border-left: 5px solid #fff;
+        border-right: 5px solid #fff;
+    }
+
+    .falcon-pillar {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+    }
+
+    .parrot-pillar {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+    }
+
+    .peacock-pillar {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+    }
+
+    .performance-pillar {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+
+    }
+
+
+    .desc-data {}
+
+    .desc-header {
+        width: 15%;
+
+    }
+
+    .desc-header img {
+        height: 130px;
+        width: 33;
+    }
+
+    .falcon-header {
+        width: 20%;
+    }
+
+    .parrot-header {
+        width: 20%;
+    }
+
+    .peacock-header {
+        width: 25%;
+    }
+
+    .performance-header {
+        width: 20%;
+    }
+
+    .r1 {
+        height: 10em;
+    }
+
+    .r2 {
+        height: 22em;
+    }
+
+    .r3 {
+        height: 4em;
+    }
+
+    .r4 {
+        height: 4em;
+    }
+
+    .r5 {
+        height: 3em;
+    }
+
+    .r6 {
+        height: 34em;
+    }
+
+    .r7 {
+        height: 10em;
+    }
+
+    .r8 {
+        height: 4em;
+    }
+
+    .r9 {
+        height: 4em;
+    }
+
+    .card {
+        text-align: center;
+        border: 5px solid #fff;
+        padding: 20px 10px;
+        overflow: hidden;
+        color: white;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .desc-card {
+        color: #000;
+        text-align: right;
+        background-color: #f2f2f2;
+        word-break: normal;
+
+    }
+
+    .falcon-card {
+        background-color: #1855a6;
+    }
+
+    .parrot-card {
+        background-color: #049661;
+
+    }
+
+    .peacock-card {
+        background-color: #79a8d6;
+    }
+
+    .performance-card {
+        background-color: #333333;
+    }
+
+    @media screen and (min-width: 1200px) {
+        .falcon-card {
+            min-width: 215px;
+        }
+
+        .peacock-card {
+            min-width: 215px;
+        }
+
+        .performance-card {
+            min-width: 215px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .card p {
+            height: fit-content;
+            width: fit-content;
+        }
+
+        .contenedor-tabla {}
+
+        .area-tabla {
+            flex-direction: row;
+            display: inline-block;
+
+        }
+
+        .encabezado-contenido {
+            width: 100%;
+        }
+
+        .titulos-tabla {
+            flex-direction: column;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            width: 105px;
+            float: left;
+            position: relative;
+            z-index: 100;
+
+        }
+
+        .titulos-tabla img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .titulos-tabla h2 {
+            font-size: 14px;
+        }
+
+        .desc-header {
+            height: 60px;
+            width: 100%;
+        }
+
+        .falcon-header {
+            height: 230px;
+            width: 100%;
+        }
+
+        .parrot-header {
+            height: 230px;
+            width: 100%;
+        }
+
+        .peacock-header {
+            height: 230px;
+            width: 100%;
+        }
+
+        .performance-header {
+            height: 230px;
+            width: 100%;
+        }
+
+        .desc-head img {
+            width: 15px;
+            height: 55px;
+        }
+
+        .contenido-tabla {
+            display: block;
+            width: inherit;
+            position: relative;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            /* white-space: nowrap; */
+
+        }
+
+        .contenido-tabla p {
+            line-height: 1em;
+        }
+
+        .r1 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r2 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r3 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r4 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r5 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r6 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r7 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r8 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r9 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .desc-pillar {
+            width: 100%;
+            height: 110px;
+            flex-direction: row;
+        }
+
+        .falcon-pillar {
+            flex-direction: row;
+            height: 280px;
+            width: 100%;
+        }
+
+        .parrot-pillar {
+            flex-direction: row;
+            height: 280px;
+            width: 100%;
+        }
+
+        .peacock-pillar {
+            flex-direction: row;
+            height: 280px;
+            width: 100%;
+        }
+
+        .performance-pillar {
+            flex-direction: row;
+            height: 280px;
+            width: 100%;
+        }
+
+    }
+</style>
+
+<body class="body-specifications">
+    <div class="contenedor-general">
+        <div class="encabezado">
+            <div class="area-roja">
+                <p><b>¡IMPORTANTE!</b> Tu pedido puede tardar ligeramente más de lo normal en llegar a causa de la
+                    contingencia
+                    por COVID-19
+                </p>
+            </div>
+            <div class="encabezado-inferior">
+                <div class="encabezado-contenido">
+                    <div class="encabezado-logo"><img
+                            src="https://cdn.shopify.com/s/files/1/1437/8626/files/BIRDMAN-LOGO-blue_280x@2x.png?v=1538428890"
+                            alt=""></div>
+                    <div class="encabezado-menus">
+                        <ul class="menu-superior">
+                            <li> <a href="">📞 33 1600 8754 | Mayoreo: 33 2154 9040</a></li>
+                            <li>
+                                <ul class="redes-sociales">
+                                    <li>
+                                        <i class="fab fa-twitter"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-facebook"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-pinterest"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-instagram"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope-square"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">Inicia sesión</a>
+                            </li>
+                            <li>
+                                <form class="search" action="/search">
+
+                                    <input type="text" name="q" class="search_box" placeholder="Buscar..." value=""
+                                        autocapitalize="off" autocomplete="off" autocorrect="off">
+                                </form>
+                            </li>
+                            <li>
+                                <img src="https://cdn.shopify.com/s/files/1/1437/8626/t/27/assets/eeuu_flag_30x.png?v=6089846547088687235"
+                                    alt="">
+                            </li>
+                        </ul>
+                        <ul class="menu-inferior">
+                            <li>
+                                <a href="">Comprar</a>
+                            </li>
+                            <li>
+                                <a href="">Nuestros Productos <i class="fas fa-chevron-down"></i> </a>
+                            </li>
+                            <li>
+                                <a href="">Tabla Comparativa</a>
+                            </li>
+                            <li>
+                                <a href="">Nosotros</a>
+                            </li>
+                            <li>
+                                <a href="">Blog</a>
+                            </li>
+                            <li>
+                                <a href="">Mi Suscripción</a>
+                            </li>
+                            <li id="carrito">
+                                <a href="">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>Carrito</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-tabla">
+            <div class="area-tabla">
+                <div class="titulos-tabla">
+                    <div class="desc-card card desc-header">
+                        <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/Recurso_2_large.png" alt="">
+                    </div>
+                    <div class="falcon-card card falcon-header">
+                        <h2>FALCON</h2>
+                        <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/Screenshot_1_grande.png" alt="">
+                        <p>PROTEÍNA VEGETAL</p>
+                    </div>
+                    <div class="parrot-card card parrot-header">
+                        <h2>PARROT</h2>
+                        <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/parrot-tabla-comparativa.jpg"
+                            alt="">
+                        <p>GREENS AND PROTEINS</p>
+                    </div>
+                    <div class="peacock-card card peacock-header">
+                        <h2>PEACOCK</h2>
+                        <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/Screenshot_3_grande.png" alt="">
+                        <p>ORGANIC MEAL</p>
+                    </div>
+                    <div class="performance-card card performance-header">
+                        <h2>PERFORMANCE</h2>
+                        <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/PerformanceTabla.jpg" alt="">
+                        <p>PROTEINA PREMIUM</p>
+                    </div>
+                </div>
+                <div class="contenido-tabla">
+                    <div class="description-data desc-pillar">
+                        <div class="desc-card card r1">
+                            <p>USO</p>
+                        </div>
+                        <div class="desc-card card r2">
+                            <p>POR QUE TE ENCANTARA</p>
+                        </div>
+                        <div class="desc-card card r3">
+                            <p>PROTEINA</p>
+                        </div>
+                        <div class="desc-card card r4">
+                            <p>VERDES</p>
+                        </div>
+                        <div class="desc-card card r5 ">
+                            <p>CALORIAS</p>
+                        </div>
+                        <div class="desc-card card r6">
+                            <p>CARACTERISTICAS</p>
+                        </div>
+                        <div class="desc-card card r7">
+                            <p>NO CONTIENE</p>
+                        </div>
+                        <div class="desc-card card r8">
+                            <p>SELLOS Y CERTIFICACIONES</p>
+                        </div>
+                        <div class="desc-card card r9">
+                            <p>SABORES</p>
+                        </div>
+                    </div>
+                    <div class="falcon-data falcon-pillar">
+                        <div class="falcon-card card r1">
+                            <p>Ideal para después o antes del ejercicio, o simplemente para asegurar tu ingesta diaria
+                                de proteína.</p>
+                        </div>
+                        <div class="falcon-card card r2 ">
+                            <p>- Falcon es una proteína de calidad.
+                                <br>- 100% de origen vegetal.
+                                <br>- Delicioso
+                                sabor.
+                                <br>- Puedes hacer muchas recetas.
+                                <br>- Debido a su pureza de origen puede ser
+                                consumida por todos.</p>
+                            <p><strong>¡Te sorprenderás de todo lo que puedes preparar con ella!</strong></p>
+                        </div>
+                        <div class="falcon-card card r3">
+                            <p><strong>22-24 GR<br>(Por porción de 30gr)</strong></p>
+                        </div>
+                        <div class="falcon-card card r4">
+                            <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/remove_icon_1cde55f4-2e37-4ed3-998b-616116958278_32x32.png?v=1599761366"
+                                alt="">
+                        </div>
+                        <div class="falcon-card card r5">
+                            <p><strong>105 - 109</strong></p>
+                        </div>
+                        <div class="falcon-card card r6">
+                            <p>
+                                - Mezcla de 8 proteínas vegetales orgánicas.
+                                <br>- Enzimas digestivas protease y
+                                probióticos bacillus coagulans.
+                                <br>- 3.8 gr Glutamina
+                                <br>- 4.2 gr BCAAS
+                                <br>- 2 gr Fibra
+                                <br>- Fuente elevada de aminoácidos
+                                <br>- Fusión altamente digerible
+                                <br>- Hipoalergénico
+                            </p>
+                        </div>
+                        <div class="falcon-card card r7">
+                            <p>- Gluten.Soya.
+                                <br>- Lácteos.
+                                <br>- Químicos.
+                                <br>- Hexano.
+                                <br>- Edulcorantes, saborizantes
+                                ni conservadores artificiales.</p>
+                        </div>
+                        <div class="falcon-card card r8">
+                            <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/Screenshot_5_grande.png" alt="">
+                        </div>
+                        <div class="falcon-card card r9">
+                            <p><strong>NATURAL, CHOCOLATE, VAINILLA Y CHAI</strong></p>
+                        </div>
+                    </div>
+                    <div class="parrot-data parrot-pillar">
+                        <div class="parrot-card card r1">
+                            <p>Poderosa colación, completa en macro-nutrientes y repleta de minerales y vitaminas. Alta
+                                en antioxidantes.</p>
+                        </div>
+                        <div class="parrot-card card r2">
+                            <p>- Mezcla armoniosa de varios nutrientes de origen vegetal marinos y terrestres.<br>-
+                                Parrot está diseñado para ofrecerte macronutrientes y micronutrientes de fuentes verdes
+                                para esos tiempos entre comidas.</p>
+                            <p><br><strong>¡No olvides tomar tus verdes todos los días!</strong></p>
+                        </div>
+                        <div class="parrot-card card r3">
+                            <p><strong>15 GR<br>(Por porción de 30gr)</strong></p>
+                        </div>
+                        <div class="parrot-card card r4">
+                            <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/check_icon_4da2eef7-2c36-4814-9f0c-db3214fa489f_32x32.png"
+                                alt="">
+                        </div>
+                        <div class="parrot-card card r5">
+                            <p><strong>110</strong></p>
+                        </div>
+                        <div class="parrot-card card r6">
+                            <p><strong>Altas cantidades de: </strong></p>
+                            <p>- Minerales.<br>- Vitaminas.<br>- Vitaminas A y C 50%<br>- VNR Vitamina B9 y E 100% VNR
+                            </p>
+                            <p><strong>Excelente fuente de:</strong><br> - Calcio.<br>- Hierro.<br>- Zinc.<br>-
+                                Magnesio.<br>- Aporta antioxidantes.<br>- 4 gr Fibra.<br>- Hasta 11 vegetales verdes en
+                                polvo.</p>
+                        </div>
+                        <div class="parrot-card card r7">
+                            <p>- Gluten.<br>- Soya.<br>- Ingredientes de origen animal.<br>- Edulcorantes, saborizantes
+                                ni conservadores artificiales.</p>
+                        </div>
+                        <div class="parrot-card card r8">
+                            <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/certificado-kosher-parrot_03.jpg"
+                                alt="">
+                        </div>
+                        <div class="parrot-card card r9">
+                            <p><strong>MATCHA Y BERRY VAINILLA</strong></p>
+                        </div>
+                    </div>
+                    <div class="peacock-data peacock-pillar">
+                        <div class="peacock-card card r1">
+                            <p>Alimento funcional inteligente diseñado para aportarte los nutrientes de una comida
+                                ligera y balanceada.</p>
+                        </div>
+
+                        <div class="peacock-card card r2">
+                            <p>-Peacock aporta especialmente aquellos nutrientes que tienden a hacer falta en personas
+                                que siguen una dieta basada en plantas como la Vitamina B-12 , Vitamina D y ácidos
+                                grasos Omega-3 y 6.<br>-Peacock va más allá de un suplemento, es un alimento funcional
+                                inteligente que ofrece lo mejor del reino vegetal.<br><strong>¡Peacock es un
+                                    todo-en-uno!</strong></p>
+                        </div>
+
+                        <div class="peacock-card card r3">
+                            <p><strong>18 GR<br>(Por porción de 42gr)</strong></p>
+                        </div>
+                        <div class="peacock-card card r4">
+                            <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/check_icon_4da2eef7-2c36-4814-9f0c-db3214fa489f_32x32.png"
+                                alt="">
+                        </div>
+
+                        <div class="peacock-card card r5">
+                            <p><strong>138</strong></p>
+                        </div>
+
+                        <div class="peacock-card card r6">
+                            <p><strong>Macronutrientes:</strong><br> -18gr de proteína por porción.<br> -15gr de
+                                carbohidratos saludables (de los cuales 10g son fibra)<br> -5gr de grasas saludables
+                                (contiene Omega-3)<br> <br> <strong>Micronutrientes: <br>(c/u con mas del 100% del
+                                    requerimiento diario recomendado)</strong><br> -Vitamina B1, B2, B3, B5, B6, B12, C,
+                                D, E<br> <br> <strong>Otros aportes:</strong><br> -Vitamina A (50%)<br> -Ácido Fólico
+                                (29%)<br> -Calcio (60%)<br> -Hierro (80%)</p>
+                        </div>
+                        <div class="peacock-card card r7">
+                            <p>- Gluten.<br>- Soya.<br>- Lácteos.<br>- Químicos</p>
+                        </div>
+
+                        <div class="peacock-card card r8">
+                            <p><strong>Próximamente</strong></p>
+                        </div>
+
+                        <div class="peacock-card card r9">
+                            <p><strong>COCO-VAINILLA Y CHOCOLATE</strong></p>
+                        </div>
+                    </div>
+                    <div class="performance-data performance-pillar">
+                        <div class="performance-card card r1">
+                            <p>Mezcla de proteína vegetal Premium, ideal para tomar después de ejercicios de alta
+                                intensidad.</p>
+                        </div>
+                        <div class="performance-card card r2">
+                            <p>- Cadena de Aminoácidos Completa.<br>- Mezcla antiinflamatoria, creatina y BCAAs para
+                                mejor recuperación muscular.<br>- Mezcla digestiva para una absorción y digestión
+                                mejoradas.</p>
+                            <p><br><strong>¡Eleva tu Performance de forma deliciosa y segura!</strong></p>
+                        </div>
+                        <div class="performance-card card r3">
+                            <p><strong>30 GR<br>(Por porción de 38gr)</strong></p>
+                        </div>
+                        <div class="performance-card card r4">
+                            <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/remove_icon_1cde55f4-2e37-4ed3-998b-616116958278_32x32.png"
+                                alt="">
+                        </div>
+                        <div class="performance-card card r5">
+                            <p><strong>138</strong>.</p>
+                        </div>
+                        <div class="performance-card card r6">
+                            <p>- Perfil de Aminoácidos completo.<br>- Mezcla Digestiva Patentada.<br>- 3gr de Creatina
+                                (Creapure)<br>- 6gr BCAAS<br>- Mezcla antiinflamatoria para recuperación muscular</p>
+                        </div>
+                        <div class="performance-card card r7">
+                            <p>- Gluten.Soya.<br>- Lácteos.<br>- Químicos.<br>- Hexano.<br>- Edulcorantes, saborizantes
+                                ni conservadores artificiales.</p>
+                        </div>
+                        <div class="performance-card card r8">
+                            <p><strong>Próximamente</strong></p>
+                        </div>
+                        <div class="performance-card card r9">
+                            <p><strong>CHOCO-BRONZE Y GOLDEN VANILLA</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
