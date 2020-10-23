@@ -1,453 +1,815 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <script src="https://kit.fontawesome.com/ca583662c5.js" crossorigin="anonymous"></script>
+
+</head>
+
 <style>
-    .main-content {
-        display: block;
+    .body-specifications {
+        margin: 0;
+        border: 0;
+    }
+
+    .contenedor-general {
         background-color: white;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .title-1 {
-        color: 3071a9;
-        font-size: 2.5em;
-        font-weight: bold;
-        margin: 2% 0;
-        text-align: center;
-    }
-
-    .title-2 {
-        color: #025a8c;
-        font-size: 2.0em;
-    }
-
-
-
-    .arrow-double {
-        max-width: 60px;
-    }
-
-    .membership-area {
-        display: inline-block;
-        width: 100%;
-        margin: 2% 0;
-        padding: 2%;
-        font-size: 3em;
-        background-color: #f6f6f6;
-    }
-
-    .membership-area button {
-        max-width: 25%;
-        margin: 0 3%;
-        width: 90%;
-        background-color: #3071a9;
-        padding: 10px 16px;
-        font-size: 18px;
-        color: white;
-    }
-
-    .package-area {
-        margin-left: -10px;
-        margin-right: -10px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .area-venta {
-        width: 50%;
-        float: left;
-        padding-left: 10px;
-        padding-right: 10px;
-        position: relative;
-    }
-
-    .venta-row {
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        background-color: white;
-        justify-content: center;
-    }
-
-    .venta-title {
-        color: white;
-        background-color: #3071a9;
-        font-weight: bold;
-        margin: 1% 0;
-        padding: 4px;
-    }
-
-    .venta-membrecia {
-        max-width: 330px;
-        margin: 0 2px;
-        background-color: #f6f6f6;
-        border: 1px solid #e2e2e2;
-        color: black;
-        padding: 17px 0 0 0;
-
-    }
-
-    .venta-membrecia h1 {
-        display: block;
+        font-family: Montserrat, sans-serif;
         line-height: 1.8em;
-        font-size: 34px;
-        margin: 0;
-        padding: 0;
-        color: black;
+
 
     }
 
-    .venta-membrecia img {
-        max-width: 245px;
+    a {
+        text-decoration: none;
     }
 
-    .venta-price {
-        font-size: 4rem;
-        margin: 8px 0;
+    .encabezado {
+        padding-bottom: 20px;
+        width: inherit;
     }
 
-    .venta-membrecia ul {
-        list-style: none;
-        margin: 0;
-        padding: 0
-    }
-
-    .venta-membrecia li {
-        max-height: 70px;
-        border-top: none;
-        display: table;
-        width: 100%;
-        padding: 2% 0;
-        color: #333333;
-        height: 70px;
-        margin: 0;
-
-    }
-
-    .venta-membrecia li img {
-        display: inline-table;
-        vertical-align: middle;
-    }
-
-    .venta-texts {
-        width: 85%;
-        display: inline-table;
-        text-align: left;
-    }
-
-    .venta-membrecia button {
+    .area-roja {
+        height: auto;
+        padding: 2px 0;
+        opacity: 1;
+        background-color: #8d0404;
+        text-align: center;
+        font-size: 13px;
+        z-index: 5000;
         color: #ffffff;
-        width: 90%;
-        margin: 5px auto;
-        background-color: #3071a9;
-        padding: 10px 16px;
-        font-size: 18px;
     }
 
-    .beneficios-row {
+    .area-roja p {
+        width: 90%;
+        margin: 0 auto;
+        line-height: 1.8em;
+    }
+
+    .encabezado-inferior {
+        border-bottom: solid 1px #9da6ae;
+        padding-bottom: 15px;
+        background-color: white;
+    }
+
+    .encabezado-contenido {
+        padding: 15px 0px 0px 0px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .encabezado-contenido::after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .encabezado-logo {
+        margin-left: 0;
+        width: 280px;
+        float: left;
+        display: inline;
+    }
+
+    .encabezado-logo img {
+        max-width: 180px;
+        padding-top: 0px;
+        margin: 0;
+        display: block;
+    }
+
+    .encabezado-menus {
+        display: inline;
+        text-align: right;
+    }
+
+
+    .encabezado-menus ul li {
+        display: inline-block;
+        padding: 0 0 0 16px;
+        position: relative;
+        margin: 0;
+        border: 0;
+    }
+
+    .encabezado-menus ul li a {
+        color: #1d3a6e;
+    }
+
+    .redes-sociales ul {
+        font-size: 95%;
+    }
+
+    .redes-sociales li {
+        padding-left: 0 !important;
+    }
+
+    .redes-sociales li i {
+        padding: 6px;
+        color: white;
+        margin: 0 0 0 5px;
+        opacity: 0.8;
+        background-color: #1c56a3;
+        border-radius: 50%;
+        line-height: 1;
+        position: relative;
+        display: block;
+    }
+
+    .menu-superior {
+        padding-top: 13px;
+        margin-bottom: 10px;
+        list-style: none;
+    }
+
+    .menu-superior ul {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-superior li a,
+    .menu-superior li a:visited {
+        font-size: 14px;
+        color: #1d3a6e;
+    }
+
+    .menu-inferior ul {
+        display: inline;
+    }
+
+    .menu-inferior li a {
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    #carrito {
+        display: inline-block;
+        padding: 0 0 0 16px;
+        position: relative;
+        margin: 0;
+        border: 0
+    }
+
+    #carrito li a {
+        padding: 10px 15px 10px 15px;
+        border: solid 1px #9da6ae;
+        border-radius: 5px;
+        color: #1d3a6e
+    }
+
+    .contenedor-tabla {
+        margin: 0 auto;
+    }
+
+    .area-tabla {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 5px 20px 5px;
+    }
+
+    .titulos-tabla {
         display: flex;
         flex-direction: row;
+        width: 100%;
+
     }
 
-    .beneficios-card {
-        background-color: #ebebeb;
-        border: 3px solid #ffffff;
-        padding: 2%;
-        width: 33.333%;
-        float: left;
-        color: black;
+    .contenido-tabla {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+    }
+
+    .desc-pillar {
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+        border-left: 5px solid #fff;
+        border-right: 5px solid #fff;
+    }
+
+    .falcon-pillar {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+    }
+
+    .parrot-pillar {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+    }
+
+    .peacock-pillar {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+    }
+
+    .performance-pillar {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+
+    }
+
+
+    .desc-data {}
+
+    .desc-header {
+        width: 15%;
+
+    }
+
+    .desc-header img {
+        height: 130px;
+        width: 33;
+    }
+
+    .falcon-header {
+        width: 20%;
+    }
+
+    .parrot-header {
+        width: 20%;
+    }
+
+    .peacock-header {
+        width: 25%;
+    }
+
+    .performance-header {
+        width: 20%;
+    }
+
+    .r1 {
+        height: 10em;
+    }
+
+    .r2 {
+        height: 22em;
+    }
+
+    .r3 {
+        height: 4em;
+    }
+
+    .r4 {
+        height: 4em;
+    }
+
+    .r5 {
+        height: 3em;
+    }
+
+    .r6 {
+        height: 34em;
+    }
+
+    .r7 {
+        height: 10em;
+    }
+
+    .r8 {
+        height: 4em;
+    }
+
+    .r9 {
+        height: 4em;
+    }
+
+    .card {
         text-align: center;
+        border: 5px solid #fff;
+        padding: 20px 10px;
+        overflow: hidden;
+        color: white;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+
     }
 
-    .beneficios-card img {
-        max-width: 60px;
+    .desc-card {
+        color: #000;
+        text-align: right;
+        background-color: #f2f2f2;
+        word-break: normal;
+
     }
 
-    .philosophy-section {
-        margin: 2% 0;
-        background-color: #ebebeb;
-        padding: 3%;
+    .falcon-card {
+        background-color: #1855a6;
     }
 
-    .cash-icon {
-        font-size: 60%;
-        vertical-align: middle;
+    .parrot-card {
+        background-color: #049661;
+
     }
 
-    .number-icon {
-        font-size: small;
-        top: -0.5em;
+    .peacock-card {
+        background-color: #79a8d6;
     }
 
-    @media screen and (min-width: 1024px) {
-        .main-content {
-            width: 100%;
-            max-width: 1400px;
-            padding: 0px 20px 0px 20px;
+    .performance-card {
+        background-color: #333333;
+    }
+
+    @media screen and (min-width: 1200px) {
+        .falcon-card {
+            min-width: 215px;
+        }
+
+        .peacock-card {
+            min-width: 215px;
+        }
+
+        .performance-card {
+            min-width: 215px;
         }
     }
 
+    @media screen and (max-width: 767px) {
+        .card p {
+            height: fit-content;
+            width: fit-content;
+        }
 
-    @media screen and (max-width: 768px) {
-        .package-area {
+        .contenedor-tabla {}
+
+        .area-tabla {
+            flex-direction: row;
+            display: inline-block;
+
+        }
+
+        .encabezado-contenido {
+            width: 100%;
+        }
+
+        .titulos-tabla {
             flex-direction: column;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            width: 105px;
+            float: left;
+            position: relative;
+            z-index: 100;
+
         }
 
-        .area-venta {
-            width: 100%;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        .membership-area {
-            font-size: 2em;
-        }
-
-        .membership-area button {
+        .titulos-tabla img {
             max-width: 100%;
-            margin: 2%;
-
+            max-height: 100%;
         }
 
-        .beneficios-row {
-            flex-direction: column;
+        .titulos-tabla h2 {
+            font-size: 14px;
         }
 
-        .beneficios-card {
+        .desc-header {
+            height: 60px;
             width: 100%;
         }
+
+        .falcon-header {
+            height: 230px;
+            width: 100%;
+        }
+
+        .parrot-header {
+            height: 230px;
+            width: 100%;
+        }
+
+        .peacock-header {
+            height: 230px;
+            width: 100%;
+        }
+
+        .performance-header {
+            height: 230px;
+            width: 100%;
+        }
+
+        .desc-head img {
+            width: 15px;
+            height: 55px;
+        }
+
+        .contenido-tabla {
+            display: block;
+            width: inherit;
+            position: relative;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            /* white-space: nowrap; */
+
+        }
+
+        .contenido-tabla p {
+            line-height: 1em;
+        }
+
+        .r1 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r2 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r3 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r4 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r5 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r6 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r7 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r8 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .r9 {
+            height: 100%;
+            width: 200px;
+        }
+
+        .desc-pillar {
+            width: 100%;
+            height: 110px;
+            flex-direction: row;
+        }
+
+        .falcon-pillar {
+            flex-direction: row;
+            height: 280px;
+            width: 100%;
+        }
+
+        .parrot-pillar {
+            flex-direction: row;
+            height: 280px;
+            width: 100%;
+        }
+
+        .peacock-pillar {
+            flex-direction: row;
+            height: 280px;
+            width: 100%;
+        }
+
+        .performance-pillar {
+            flex-direction: row;
+            height: 280px;
+            width: 100%;
+        }
+
     }
 </style>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-</head>
-
-<body>
-    <div class="main-content">
-
-        <p class="title-2">¿Tienes dudas acerca de <strong>como registrate</strong>? da clic aqui </p>
-        <div class="membership-area">
-            ¿Ya tienes membresia?<button>Registrate aqui</button>
-        </div>
-
-        <div class="package-area">
-            <div class="area-venta">
-                <div class="venta-title">
-                    INDIVIDUAL
-                </div>
-                <div class="venta-row">
-                    <div class="venta-membrecia">
-                        <h1>Dorada</h1>
-                        <img src="https://www.costco.com.mx/medias/sys_master/images/h03/hcc/46784305889310.png" alt="">
-                        <p class="venta-price"><span class="cash-icon">$</span>500</p>
-                        Anualidad incluye impuestos
-                        <br>
-                        <a href="">Renuévala aquí</a>
-                        <ul>
-                            <li>
-                                <p class="venta-texts"> Membresía complementaria sin costo</p>
-                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
-                            </li>
-                            <li style="background-color: #ebebeb;">
-                                <p class="venta-texts">Válida en todo el mundo</p>
-                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
-                            </li>
-                            <li>
-                                <p class="venta-texts">2% de Recompensa sobre el total anual de tus compras sin
-                                    impuestos (Recompensa
-                                    máxima de
-                                    $7,500 M.N.)</p>
-                                <img src="https://i.ibb.co/cYX9z1M/xmark.png" alt="">
-                            </li>
-                            <li style="background-color: #ebebeb;">
-                                <p class="venta-texts">Membresías Adicionales ($250 por membresía)</p>
-                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
-                            </li>
-                        </ul>
-                        <button>Agregar al carrito</button>
-                    </div>
-                    <div class="venta-membrecia">
-                        <h1>Dorada Ejecutiva</h1>
-                        <img src="https://www.costco.com.mx/medias/sys_master/images/h40/hf0/46784306020382.png" alt="">
-                        <p class="venta-price"><span class="cash-icon">$</span>1,100</p>
-                        Anualidad incluye impuestos
-                        <br>
-                        <a href="">Renuévala aquí</a>
-                        <ul>
-                            <li>
-                                <p class="venta-texts">Membresía complementaria sin costo </p>
-                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
-                            </li>
-                            <li style="background-color: #ebebeb;">
-                                <p class="venta-texts">Válida en todo el mundo</p>
-                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
-                            </li>
-                            <li>
-                                <p class="venta-texts">2% de Recompensa sobre el total anual de tus compras sin
-                                    impuestos (Recompensa
-                                    máxima de
-                                    $7,500 M.N.)</p>
-                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
-                            </li>
-                            <li style="background-color: #ebebeb;">
-                                <p class="venta-texts">Membresías Adicionales ($250 por membresía)</p>
-                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
-                            </li>
-                        </ul>
-                        <button>Agregar al carrito</button>
-                    </div>
-                </div>
+<body class="body-specifications">
+    <div class="contenedor-general">
+        <div class="encabezado">
+            <div class="area-roja">
+                <p><b>¡IMPORTANTE!</b> Tu pedido puede tardar ligeramente más de lo normal en llegar a causa de la
+                    contingencia
+                    por COVID-19
+                </p>
             </div>
-
-
-            <div class="area-venta">
-                <div class="venta-title">
-                    NEGOCIO
-                </div>
-                <div class="venta-row">
-                    <div class="venta-membrecia">
-                        <h1>Negocio</h1>
-                        <img src="https://www.costco.com.mx/medias/sys_master/images/h67/hf5/46784306216990.png" alt="">
-                        <p class="venta-price"><span class="cash-icon">$</span>500</p>
-                        Anualidad incluye impuestos
-                        <br>
-                        <a href="">Renuévala aquí</a>
-                        <ul>
+            <div class="encabezado-inferior">
+                <div class="encabezado-contenido">
+                    <div class="encabezado-logo"><img
+                            src="https://cdn.shopify.com/s/files/1/1437/8626/files/BIRDMAN-LOGO-blue_280x@2x.png?v=1538428890"
+                            alt=""></div>
+                    <div class="encabezado-menus">
+                        <ul class="menu-superior">
+                            <li> <a href="">📞 33 1600 8754 | Mayoreo: 33 2154 9040</a></li>
                             <li>
-                                <p class="venta-texts">Membresía complementaria sin costo</p>
-                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
-                            </li>
-                            <li style="background-color: #ebebeb;">
-                                <p class="venta-texts">Válida en todo el mundo</p>
-                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                                <ul class="redes-sociales">
+                                    <li>
+                                        <i class="fab fa-twitter"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-facebook"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-pinterest"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-instagram"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope-square"></i>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
-                                <p class="venta-texts">2% de Recompensa sobre el total anual de tus compras sin
-                                    impuestos (Recompensa
-                                    máxima de
-                                    $7,500 M.N.)</p>
-                                <img src="https://i.ibb.co/cYX9z1M/xmark.png" alt="">
+                                <a href="">Inicia sesión</a>
                             </li>
-                            <li style="background-color: #ebebeb;">
-                                <p class="venta-texts">Membresías Adicionales ($250 por membresía)</p>
-                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            <li>
+                                <form class="search" action="/search">
+
+                                    <input type="text" name="q" class="search_box" placeholder="Buscar..." value=""
+                                        autocapitalize="off" autocomplete="off" autocorrect="off">
+                                </form>
+                            </li>
+                            <li>
+                                <img src="https://cdn.shopify.com/s/files/1/1437/8626/t/27/assets/eeuu_flag_30x.png?v=6089846547088687235"
+                                    alt="">
                             </li>
                         </ul>
-                        <button>Agregar al carrito</button>
-                    </div>
-                    <div class="venta-membrecia">
-                        <h1>Negocio Ejecutiva</h1>
-                        <img src="https://www.costco.com.mx/medias/sys_master/images/h40/hf0/46784306020382.png" alt="">
-                        <p class="venta-price"><span class="cash-icon">$</span>1,100</p>
-                        Anualidad incluye impuestos
-                        <br>
-                        <a href="">Renuévala aquí</a>
-                        <ul>
+                        <ul class="menu-inferior">
                             <li>
-                                <p class="venta-texts">Membresía complementaria sin costo</p>
-                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
-                            </li>
-                            <li style="background-color: #ebebeb;">
-                                <p class="venta-texts">Válida en todo el mundo</p>
-                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                                <a href="">Comprar</a>
                             </li>
                             <li>
-                                <p class="venta-texts">2% de Recompensa sobre el total anual de tus compras sin
-                                    impuestos (Recompensa
-                                    máxima de
-                                    $7,500 M.N.)</p>
-                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                                <a href="">Nuestros Productos <i class="fas fa-chevron-down"></i> </a>
                             </li>
-                            <li style="background-color: #ebebeb;">
-                                <p class="venta-texts">Membresías Adicionales ($250 por membresía)</p>
-                                <img src="https://i.ibb.co/BsrPwj4/checkmark.png" alt="">
+                            <li>
+                                <a href="">Tabla Comparativa</a>
+                            </li>
+                            <li>
+                                <a href="">Nosotros</a>
+                            </li>
+                            <li>
+                                <a href="">Blog</a>
+                            </li>
+                            <li>
+                                <a href="">Mi Suscripción</a>
+                            </li>
+                            <li id="carrito">
+                                <a href="">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>Carrito</span>
+                                </a>
                             </li>
                         </ul>
-                        <button>Agregar al carrito</button>
                     </div>
+
                 </div>
             </div>
         </div>
-
-
-        <h1 class="title-1">Beneficios adicionales <br>
-            *Consulta terminos y condiciones</h1>
-        <img class="arrow-double" src="https://www.costco.com.mx/medias/sys_master/banners/h11/hc3/46784611680286.png"
-            alt="double-arrows-pointing-down">
-        <div class="beneficios-section">
-            <div class="beneficios-row">
-                <div class="beneficios-card"><img
-                        src="https://www.costco.com.mx/medias/sys_master/banners/h5b/h44/46784611450910.png" alt="">
-                    <p> Examen de la vista profesional sin costo. </p>
+        <div class="contenedor-tabla">
+            <div class="area-tabla">
+                <div class="titulos-tabla">
+                    <div class="desc-card card desc-header">
+                        <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/Recurso_2_large.png" alt="">
+                    </div>
+                    <div class="falcon-card card falcon-header">
+                        <h2>FALCON</h2>
+                        <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/Screenshot_1_grande.png" alt="">
+                        <p>PROTEÍNA VEGETAL</p>
+                    </div>
+                    <div class="parrot-card card parrot-header">
+                        <h2>PARROT</h2>
+                        <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/parrot-tabla-comparativa.jpg"
+                            alt="">
+                        <p>GREENS AND PROTEINS</p>
+                    </div>
+                    <div class="peacock-card card peacock-header">
+                        <h2>PEACOCK</h2>
+                        <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/Screenshot_3_grande.png" alt="">
+                        <p>ORGANIC MEAL</p>
+                    </div>
+                    <div class="performance-card card performance-header">
+                        <h2>PERFORMANCE</h2>
+                        <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/PerformanceTabla.jpg" alt="">
+                        <p>PROTEINA PREMIUM</p>
+                    </div>
                 </div>
-                <div class="beneficios-card"><img
-                        src="https://www.costco.com.mx/medias/sys_master/banners/h8a/h13/46784611614750.png" alt="">
-                    <p> Examen de audiometría sin costo.</p>
-                </div>
-                <div class="beneficios-card"><img
-                        src="https://www.costco.com.mx/medias/sys_master/banners/h67/h8e/46784611581982.png" alt="">
-                    <p> Compra en línea, recoge en tienda. </p>
+                <div class="contenido-tabla">
+                    <div class="description-data desc-pillar">
+                        <div class="desc-card card r1">
+                            <p>USO</p>
+                        </div>
+                        <div class="desc-card card r2">
+                            <p>POR QUE TE ENCANTARA</p>
+                        </div>
+                        <div class="desc-card card r3">
+                            <p>PROTEINA</p>
+                        </div>
+                        <div class="desc-card card r4">
+                            <p>VERDES</p>
+                        </div>
+                        <div class="desc-card card r5 ">
+                            <p>CALORIAS</p>
+                        </div>
+                        <div class="desc-card card r6">
+                            <p>CARACTERISTICAS</p>
+                        </div>
+                        <div class="desc-card card r7">
+                            <p>NO CONTIENE</p>
+                        </div>
+                        <div class="desc-card card r8">
+                            <p>SELLOS Y CERTIFICACIONES</p>
+                        </div>
+                        <div class="desc-card card r9">
+                            <p>SABORES</p>
+                        </div>
+                    </div>
+                    <div class="falcon-data falcon-pillar">
+                        <div class="falcon-card card r1">
+                            <p>Ideal para después o antes del ejercicio, o simplemente para asegurar tu ingesta diaria
+                                de proteína.</p>
+                        </div>
+                        <div class="falcon-card card r2 ">
+                            <p>- Falcon es una proteína de calidad.
+                                <br>- 100% de origen vegetal.
+                                <br>- Delicioso
+                                sabor.
+                                <br>- Puedes hacer muchas recetas.
+                                <br>- Debido a su pureza de origen puede ser
+                                consumida por todos.</p>
+                            <p><strong>¡Te sorprenderás de todo lo que puedes preparar con ella!</strong></p>
+                        </div>
+                        <div class="falcon-card card r3">
+                            <p><strong>22-24 GR<br>(Por porción de 30gr)</strong></p>
+                        </div>
+                        <div class="falcon-card card r4">
+                            <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/remove_icon_1cde55f4-2e37-4ed3-998b-616116958278_32x32.png?v=1599761366"
+                                alt="">
+                        </div>
+                        <div class="falcon-card card r5">
+                            <p><strong>105 - 109</strong></p>
+                        </div>
+                        <div class="falcon-card card r6">
+                            <p>
+                                - Mezcla de 8 proteínas vegetales orgánicas.
+                                <br>- Enzimas digestivas protease y
+                                probióticos bacillus coagulans.
+                                <br>- 3.8 gr Glutamina
+                                <br>- 4.2 gr BCAAS
+                                <br>- 2 gr Fibra
+                                <br>- Fuente elevada de aminoácidos
+                                <br>- Fusión altamente digerible
+                                <br>- Hipoalergénico
+                            </p>
+                        </div>
+                        <div class="falcon-card card r7">
+                            <p>- Gluten.Soya.
+                                <br>- Lácteos.
+                                <br>- Químicos.
+                                <br>- Hexano.
+                                <br>- Edulcorantes, saborizantes
+                                ni conservadores artificiales.</p>
+                        </div>
+                        <div class="falcon-card card r8">
+                            <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/Screenshot_5_grande.png" alt="">
+                        </div>
+                        <div class="falcon-card card r9">
+                            <p><strong>NATURAL, CHOCOLATE, VAINILLA Y CHAI</strong></p>
+                        </div>
+                    </div>
+                    <div class="parrot-data parrot-pillar">
+                        <div class="parrot-card card r1">
+                            <p>Poderosa colación, completa en macro-nutrientes y repleta de minerales y vitaminas. Alta
+                                en antioxidantes.</p>
+                        </div>
+                        <div class="parrot-card card r2">
+                            <p>- Mezcla armoniosa de varios nutrientes de origen vegetal marinos y terrestres.<br>-
+                                Parrot está diseñado para ofrecerte macronutrientes y micronutrientes de fuentes verdes
+                                para esos tiempos entre comidas.</p>
+                            <p><br><strong>¡No olvides tomar tus verdes todos los días!</strong></p>
+                        </div>
+                        <div class="parrot-card card r3">
+                            <p><strong>15 GR<br>(Por porción de 30gr)</strong></p>
+                        </div>
+                        <div class="parrot-card card r4">
+                            <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/check_icon_4da2eef7-2c36-4814-9f0c-db3214fa489f_32x32.png"
+                                alt="">
+                        </div>
+                        <div class="parrot-card card r5">
+                            <p><strong>110</strong></p>
+                        </div>
+                        <div class="parrot-card card r6">
+                            <p><strong>Altas cantidades de: </strong></p>
+                            <p>- Minerales.<br>- Vitaminas.<br>- Vitaminas A y C 50%<br>- VNR Vitamina B9 y E 100% VNR
+                            </p>
+                            <p><strong>Excelente fuente de:</strong><br> - Calcio.<br>- Hierro.<br>- Zinc.<br>-
+                                Magnesio.<br>- Aporta antioxidantes.<br>- 4 gr Fibra.<br>- Hasta 11 vegetales verdes en
+                                polvo.</p>
+                        </div>
+                        <div class="parrot-card card r7">
+                            <p>- Gluten.<br>- Soya.<br>- Ingredientes de origen animal.<br>- Edulcorantes, saborizantes
+                                ni conservadores artificiales.</p>
+                        </div>
+                        <div class="parrot-card card r8">
+                            <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/certificado-kosher-parrot_03.jpg"
+                                alt="">
+                        </div>
+                        <div class="parrot-card card r9">
+                            <p><strong>MATCHA Y BERRY VAINILLA</strong></p>
+                        </div>
+                    </div>
+                    <div class="peacock-data peacock-pillar">
+                        <div class="peacock-card card r1">
+                            <p>Alimento funcional inteligente diseñado para aportarte los nutrientes de una comida
+                                ligera y balanceada.</p>
+                        </div>
+
+                        <div class="peacock-card card r2">
+                            <p>-Peacock aporta especialmente aquellos nutrientes que tienden a hacer falta en personas
+                                que siguen una dieta basada en plantas como la Vitamina B-12 , Vitamina D y ácidos
+                                grasos Omega-3 y 6.<br>-Peacock va más allá de un suplemento, es un alimento funcional
+                                inteligente que ofrece lo mejor del reino vegetal.<br><strong>¡Peacock es un
+                                    todo-en-uno!</strong></p>
+                        </div>
+
+                        <div class="peacock-card card r3">
+                            <p><strong>18 GR<br>(Por porción de 42gr)</strong></p>
+                        </div>
+                        <div class="peacock-card card r4">
+                            <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/check_icon_4da2eef7-2c36-4814-9f0c-db3214fa489f_32x32.png"
+                                alt="">
+                        </div>
+
+                        <div class="peacock-card card r5">
+                            <p><strong>138</strong></p>
+                        </div>
+
+                        <div class="peacock-card card r6">
+                            <p><strong>Macronutrientes:</strong><br> -18gr de proteína por porción.<br> -15gr de
+                                carbohidratos saludables (de los cuales 10g son fibra)<br> -5gr de grasas saludables
+                                (contiene Omega-3)<br> <br> <strong>Micronutrientes: <br>(c/u con mas del 100% del
+                                    requerimiento diario recomendado)</strong><br> -Vitamina B1, B2, B3, B5, B6, B12, C,
+                                D, E<br> <br> <strong>Otros aportes:</strong><br> -Vitamina A (50%)<br> -Ácido Fólico
+                                (29%)<br> -Calcio (60%)<br> -Hierro (80%)</p>
+                        </div>
+                        <div class="peacock-card card r7">
+                            <p>- Gluten.<br>- Soya.<br>- Lácteos.<br>- Químicos</p>
+                        </div>
+
+                        <div class="peacock-card card r8">
+                            <p><strong>Próximamente</strong></p>
+                        </div>
+
+                        <div class="peacock-card card r9">
+                            <p><strong>COCO-VAINILLA Y CHOCOLATE</strong></p>
+                        </div>
+                    </div>
+                    <div class="performance-data performance-pillar">
+                        <div class="performance-card card r1">
+                            <p>Mezcla de proteína vegetal Premium, ideal para tomar después de ejercicios de alta
+                                intensidad.</p>
+                        </div>
+                        <div class="performance-card card r2">
+                            <p>- Cadena de Aminoácidos Completa.<br>- Mezcla antiinflamatoria, creatina y BCAAs para
+                                mejor recuperación muscular.<br>- Mezcla digestiva para una absorción y digestión
+                                mejoradas.</p>
+                            <p><br><strong>¡Eleva tu Performance de forma deliciosa y segura!</strong></p>
+                        </div>
+                        <div class="performance-card card r3">
+                            <p><strong>30 GR<br>(Por porción de 38gr)</strong></p>
+                        </div>
+                        <div class="performance-card card r4">
+                            <img src="https://cdn.shopify.com/s/files/1/1437/8626/files/remove_icon_1cde55f4-2e37-4ed3-998b-616116958278_32x32.png"
+                                alt="">
+                        </div>
+                        <div class="performance-card card r5">
+                            <p><strong>138</strong>.</p>
+                        </div>
+                        <div class="performance-card card r6">
+                            <p>- Perfil de Aminoácidos completo.<br>- Mezcla Digestiva Patentada.<br>- 3gr de Creatina
+                                (Creapure)<br>- 6gr BCAAS<br>- Mezcla antiinflamatoria para recuperación muscular</p>
+                        </div>
+                        <div class="performance-card card r7">
+                            <p>- Gluten.Soya.<br>- Lácteos.<br>- Químicos.<br>- Hexano.<br>- Edulcorantes, saborizantes
+                                ni conservadores artificiales.</p>
+                        </div>
+                        <div class="performance-card card r8">
+                            <p><strong>Próximamente</strong></p>
+                        </div>
+                        <div class="performance-card card r9">
+                            <p><strong>CHOCO-BRONZE Y GOLDEN VANILLA</strong></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="beneficios-row">
-                <div class="beneficios-card"><img
-                        src="https://www.costco.com.mx/medias/sys_master/banners/hab/hbe/46784611778590.png" alt="">
-                    <p> Limpieza de lentes y ajuste de armazón sin costo.</p>
-                </div>
-                <div class="beneficios-card"><img
-                        src="https://www.costco.com.mx/medias/sys_master/banners/h38/hc8/46784611876894.png" alt="">
-                    <p> Mantenimiento preventivo de auxiliares auditivos.</p>
-                </div>
-                <div class="beneficios-card"><img
-                        src="https://www.costco.com.mx/medias/sys_master/banners/h2c/h7e/46784611745822.png" alt="">
-                    <p> Productos exclusivos en línea.</p>
-                </div>
-            </div>
-            <div class="beneficios-row">
-                <div class="beneficios-card"><img
-                        src="https://www.costco.com.mx/medias/sys_master/banners/h5c/hdc/46784611418142.png" alt="">
-                    <p> Conoce todos los beneficios de Óptica aquí.</p>
-                </div>
-                <div class="beneficios-card"><img
-                        src="https://www.costco.com.mx/medias/sys_master/banners/heb/h91/46784611549214.png" alt="">
-                    <p> Calibración de presión de llantas sin costo.</p>
-                </div>
-                <div class="beneficios-card"><img
-                        src="https://www.costco.com.mx/medias/sys_master/banners/hcc/hfa/46784611483678.png" alt="">
-                    <p> Productos frescos y orgánicos de la más alta calidad.</p>
-                </div>
-            </div>
-        </div>
-        <h1 class="title-1">Nuestra filosofia</h1>
-        <img class="arrow-double" src="https://www.costco.com.mx/medias/sys_master/banners/h11/hc3/46784611680286.png"
-            alt="double-arrows-pointing-down">
-        <div class="philosophy-section">
-            <p>
-                Alta calidad a los mejores precios ¿cómo lo hacemos? Ofrecemos precios bajos en nuestra selección de
-                productos nacionales e importados dentro de una amplia gama de categorías. Los volúmenes de venta altos,
-                empaques eficientes y presentaciones más grandes son los que nos permiten reducir los costos de
-                embalaje, distribución y manipulación. Este modelo comercial produce grandes ventas.
-                <br> <strong> Nuestros ahorros seven reflejados en precios más bajos para ti.</strong>
-                <br><br>
-                ¿Qué marcas vendemos? Tenemos una amplia selección de artículos de <strong>marcas líderes importados y
-                    nacionales.</strong>
-                <br><br>
-                También ofrecemos nuestra marca exclusiva Kirkland Signature, con productos desarrollados de
-                <strong>igual o
-                    mejor calidad</strong> que las marcas líderes.
-                <br><br>
-                ¿Qué productos vendemos? Vendemos una <strong>gran variedad de productos para tu hogar, negocio y
-                    entretenimiento</strong>: electrónica, cómputo, línea blanca, muebles, video juegos, libros,
-                certificados de
-                regalo, juguetes, artículos deportivos, abarrotes, comida, vinos y licores, joyería, productos de salud
-                y belleza, automotriz, ferretería, jardinería, material y equipo para oficina.
-                <br><br>
-                ¿Por qué nuestros productos cambian con tanta frecuencia? Siempre nos gusta ofrecer a nuestros clientes
-                las mejores ofertas, y por lo general sólo están disponibles por tiempo limitado: cuando se acaban,
-                <br>
-                ¡se acaban! Lo llamamos <strong>“la búsqueda del tesoro continúa en línea”.</strong>
-
-            </p>
         </div>
     </div>
+
 </body>
